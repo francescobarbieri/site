@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.woff2') format('woff2');
+  font-display: swap;
+}
+
 html {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;

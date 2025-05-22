@@ -1,0 +1,30 @@
+---
+import './src/styles/global.css';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+const { frontmatter } = Astro.props;
+
+const links = [
+  { name: '@fmbarbieri', url: 'https://x.com/intent/user?screen_name=fmbarbieri' },
+  { name: 'linkedin', url: 'https://www.linkedin.com/in/barbieri-francesco' },
+  { name: 'github', url: 'https://github.com/francescobarbieri' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Head frontmatter={frontmatter} />
+  </head>
+  <body class="antialiased tracking-tight">
+    <div class="min-h-svh flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
+      <main class="max-w[60ch] mx-auto w-full">
+        <slot/>
+      </main>
+      <Footer links={links} />
+    </div>
+  </body>
+</html>

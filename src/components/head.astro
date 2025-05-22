@@ -1,0 +1,13 @@
+---
+const { frontmatter } = Astro.props;
+
+// TODO: sistemare la descrizione statica
+---
+<link rel="icon" href="favicon-light.webp" type="image/x-icon">
+<link rel="icon" href="favicon-light.webp" type="image/x-icon" media="(prefers-color-scheme: light)">
+<link rel="icon" href="favicon-dark.webp" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+<title>{ frontmatter.title ? frontmatter.title : 'Barbieri Notes' }</title>
+<meta name="description" content="Personal website of Francesco Barbieri.">
+<meta name="author" content="Francesco Barbieri">
+<meta name="keywords" content="Barbieri, Francesco Barbieri, Software Engineer, HPC">

@@ -1,0 +1,18 @@
+---
+const { links } = Astro.props;
+---
+
+<footer class="mt-12 text-center">
+  <div class="flex justify-center space-x-4 tracking-tight">
+    {links.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+      >
+        {link.name}
+      </a>
+    ))}
+  </div>
+</footer>

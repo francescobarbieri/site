@@ -24,4 +24,8 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+
+  markdown: {
+    syntaxHighlight: false,
+  }
 });

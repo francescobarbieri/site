@@ -1,11 +1,16 @@
 ---
 const { frontmatter } = Astro.props;
-
+const currentPath = Astro.url.pathname;
 // TODO: sistemare la descrizione statica
 ---
 <link rel="icon" href="favicon-light.webp" type="image/x-icon">
 <link rel="icon" href="favicon-light.webp" type="image/x-icon" media="(prefers-color-scheme: light)">
 <link rel="icon" href="favicon-dark.webp" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+<meta property="og:title" content={ frontmatter.title ? frontmatter.title : 'Barbieri Notes' } />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={ currentPath } />
+<meta property="og:description" content="Personal website of Francesco Barbieri." />
 
 <title>{ frontmatter.title ? frontmatter.title : 'Barbieri Notes' }</title>
 <meta name="description" content="Personal website of Francesco Barbieri.">

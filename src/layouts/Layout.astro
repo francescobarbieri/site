@@ -34,10 +34,6 @@ const links =[
 		<meta name='og:site_name' content='IMDb'>
 		<meta name='og:description' content={frontmatter.description ? frontmatter.description : ''}>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..500&display=swap" rel="stylesheet">
-
 		<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
 		<link rel="shortcut icon" href="/favicons/favicon.ico" />
@@ -70,7 +66,7 @@ const links =[
 	}
 
 	.container {
-		min-height: 100svh;
+		min-height: calc(100svh - 2rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -83,6 +79,7 @@ const links =[
 
 	@media (width >= 48rem) {
 		.container {
+			min-height: calc(100svh - 4rem);
 			padding-top: 2rem;
 		}
 	}

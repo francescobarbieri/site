@@ -4,13 +4,13 @@ const { links } = Astro.props;
 
 <footer>
   <div class="container">
-    {links.map((link) => (
+    {links.map((link: { url: string; name: string; }) => (
       <a
-        href={ link.url }
+        href={link.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        { link.name }
+        {link.name}
       </a>
     ))}
   </div>

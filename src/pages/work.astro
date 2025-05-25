@@ -1,7 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const links = [
+  { name: '@fmbarbieri', url: 'https://x.com/intent/user?screen_name=fmbarbieri' },
+  { name: 'linkedin', url: 'https://www.linkedin.com/in/barbieri-francesco' },
+  { name: 'github', url: 'https://github.com/francescobarbieri' },
+];
 ---
 
 <Layout>
-  
+  <Footer links={links}/>
 </Layout>

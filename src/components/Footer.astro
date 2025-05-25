@@ -1,0 +1,43 @@
+---
+const { links } = Astro.props;
+---
+
+<footer>
+  <div class="container">
+    {links.map((link) => (
+      <a
+        href={ link.url }
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        { link.name }
+      </a>
+    ))}
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .container {
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    --tw-tracking: -0.025em;
+    letter-spacing: -0.025em;
+  }
+
+  a {
+    color: #99a1af;
+    transition-property: color background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-duration: 200ms;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: oklch(62.3% 0.214 259.815);
+  }
+</style>

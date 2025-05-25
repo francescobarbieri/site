@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const { frontmatter } = Astro.props;
 
@@ -30,13 +31,22 @@ const links =[
 		<meta name='og:description' content='A group of U.S. Marines, under command of...'>
 		
 		<title>{frontmatter.title ? frontmatter.title : "Barbieri Notes"}</title>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<link rel="icon" type="image/png" href="/favicon/favicon.ico/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon/favicon.ico/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.ico/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Barbieri Notes" />
+		<link rel="manifest" href="/favicon/favicon.ico/site.webmanifest" />
 	</head>
 	<body>
-		<main>
-			<slot />
-		</main>
-		<Footer links={links} />
+		<div class="container">
+			<main>
+				<Header title={frontmatter.title ? frontmatter.title : "Barbieri Notes"}/>
+				<slot />
+			</main>
+			<Footer links={links} />
+		</div>
 	</body>
 </html>
 
@@ -46,5 +56,34 @@ const links =[
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+		--tw-tracking: -0.025em;
+		letter-spacing: -0.025em;
+	}
+
+	.container {
+		min-height: 100svh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 0;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-bottom: 2rem;
+		color: oklch(21% 0.034 264.665);
+	}
+
+	@media (width >= 48rem) {
+		.container {
+			padding-top: 2rem;
+		}
+	}
+
+	main {
+		max-width: 60ch;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
 	}
 </style>

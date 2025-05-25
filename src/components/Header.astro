@@ -18,11 +18,25 @@ const { title } = Astro.props;
     display: flex;
     flex-direction: column;
     justify-items: start;
+    line-height: 1.5rem;
+  }
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: inherit;
+    background-color: transparent;
   }
 
   .backlink {
     display: flex;
     color: oklch(70.7% 0.022 261.325);
     text-decoration: none;
+  }
+
+  .backlink:hover {
+    color: oklch(70.7% 0.022 261.325);
   }
 </style>

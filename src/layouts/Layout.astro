@@ -29,17 +29,14 @@ const links =[
 		<title>{frontmatter.title ? frontmatter.title : "Barbieri Notes"}</title>
 		<meta name="description" content={frontmatter.description ? frontmatter.description : ''}>
 
-		<link rel="preload" href="https://www.barbierinotes.com/fonts/Mencken-Std-Head-Narrow.otf" as="font" type="opentype" crossorigin>
-		<link rel="preload" href="https://www.barbierinotes.com/fonts/Mencken-Std-Text.otf" as="font" type="opentype" crossorigin>
+		<link rel="preload" href="/fonts/Mencken-Std-Head-Narrow.otf" as="font" type="font/otf" crossorigin>
+		<link rel="preload" href="/fonts/Mencken-Std-Text.otf" as="font" type="font/otf" crossorigin>
 
 		<meta name='og:title' content='Barbieri Notes'>
 		<meta name='og:type' content='website'>
 		<meta name='og:url' content='http://www.barbierinotes.com/'>
 		<meta name='og:site_name' content='Barbieri Notes'>
 		<meta name='og:description' content={frontmatter.description ? frontmatter.description : ''}>
-
-		<link rel="icon" href="/favicons/favicon-dark.webp"  media="(prefers-color-scheme:dark)">
-		<link rel="icon" href="/favicons/favicon-light.webp" media="(prefers-color-scheme:light)">
 		
 		<Analytics />
 		<SpeedInsights />

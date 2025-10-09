@@ -29,9 +29,8 @@ const links =[
 		<title>{frontmatter.title ? frontmatter.title : "Barbieri Notes"}</title>
 		<meta name="description" content={frontmatter.description ? frontmatter.description : ''}>
 
-		<link rel="preload" href="/fonts/Mencken-Std-Head-Narrow.otf" as="font" type="font/otf" crossorigin>
-		<link rel="preload" href="/fonts/Mencken-Std-Text.otf" as="font" type="font/otf" crossorigin>
 		<link rel="preload" href="/fonts/et-book-roman-old-style-figures.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
 
 		<meta name='og:title' content='Barbieri Notes'>
 		<meta name='og:type' content='website'>
@@ -65,12 +64,10 @@ const links =[
 		height: 100%;
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
-		--tw-tracking: -0.025em;
-		letter-spacing: -0.025em;
 	}
 
 	.container {
-		min-height: calc(100svh - 2rem);
+		min-height: calc(100svh - 1.5rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
